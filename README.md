@@ -2,12 +2,14 @@
 
 sudo su
 sudo yum update -y
-sudo yum install wget
+amazon-linux-extras
+amazon-linux-extras install java-openjdk11 -y
 sudo wget -O /eyum tc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-sudo yum install java-11-openjdk
-yum install jenkins
+yum install jenkins -y 
 
-sudo systemctl enable jenkins
-sudo systemctl start jenkins
-sudo systemctl status jenkins
+systemctl enable jenkins
+systemctl start jenkins
+systemctl status jenkins
+
+sudo cat var/file on jenkins site
